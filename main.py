@@ -15,7 +15,12 @@ while True:
         print("Invalid email")
         continue
 
-    password = input("Enter your password: ")
+    while True:
+        password = input("Enter your password: ")
+        if not password:
+            print("Password cannot be empty")
+            continue
+        break
 
     print('Logging in...')
     try:
